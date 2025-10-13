@@ -1,0 +1,11 @@
+target: pl_modules.cmamba_classification_module.CryptoMambaClassificationModule
+params: 
+    num_features: 16  # 5 OHLCV + 10 additional features + 1 volume
+    hidden_dims: [120, 64, 32, 1]  # Updated for window size 120 and binary classification
+    d_states: 64
+    layer_density: 4
+    loss: 'bce'
+    y_key: 'trend'
+    window_size: 120
+    num_classes: 1  # Binary classification
+normalize: False
